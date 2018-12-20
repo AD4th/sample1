@@ -11,7 +11,20 @@ class Index extends Component {
                 <aside>
                     <div class="user_info">
                         <span class="user_profile" style={profileImg}></span>
-                        <span class="user_name">서영종</span>
+                        <span class="user_name">알렉시스산체스네마냐비디치</span>
+                    </div>
+                    <div class="user_comment">
+                        <ul>
+                            <li><a href="#">asdasdasdasdasdasdasdasdasdasdasdasdasdasdasd</a></li>
+                            <li><a href="#">asdasdasdasdasdasdasdasdasdasdasdasdasdasdasd</a></li>
+                            <li><a href="#">asdasdasdasdasdasdasdasdasdasdasdasdasdasdasd</a></li>
+                            <li><a href="#">asdasdasdasdasdasdasdasdasdasdasdasdasdasdasd</a></li>
+                            <li><a href="#">asdasdasdasdasdasdasdasdasdasdasdasdasdasdasd</a></li>
+                            <li><a href="#">asdasdasdasdasdasdasdasdasdasdasdasdasdasdasd</a></li>
+                            <li><a href="#">asdasdasdasdasdasdasdasdasdasdasdasdasdasdasd</a></li>
+                            <li><a href="#">asdasdasdasdasdasdasdasdasdasdasdasdasdasdasd</a></li>
+                            <li><a href="#">asdasdasdasdasdasdasdasdasdasdasdasdasdasdasd</a></li>
+                        </ul>
                     </div>
                 </aside>
                 <div class="map_content">
