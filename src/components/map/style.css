@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,button{margin:0;padding:0;box-sizing:border-box;}
+fieldset,img{border:0 none;}
+dl,ul,ol,menu,li{list-style:none;}
+blockquote, q{quotes:none;}
+blockquote:before, blockquote:after,q:before, q:after{content:'';content:none;}
+input,select,textarea,button{border-radius:0;vertical-align:middle;}
+input::-ms-clear{display:none;}
+button{border:0 none;background-color:transparent;cursor:pointer;}
+body{background:#fff;direction:ltr;-webkit-text-size-adjust:none;}
+body,th,td,input,select,textarea,button{font-size:16px;line-height:1.5;font-family:AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif;color:#222;letter-spacing:-1px;}
+.os_mac body,.os_mac th,.os_mac td,.os_mac input,.os_mac select,.os_mac textarea,.os_mac button{letter-spacing:0;}
+a{color:#222;text-decoration:none;}
+a:hover{color:#118eff;text-decoration:underline;}
+a:active{background-color:transparent;}
+address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:normal;}
+
+.map_wrap{width:100%;}
+.map_wrap aside{position:absolute;left:0;top:0;bottom:0;z-index:1;width:12rem;padding:2rem 1rem;background:#51bebb;}
+.map_wrap aside .user_info{position:relative;width:8rem;margin-bottom:1rem;}
+.map_wrap aside .user_profile{display:block;width:50px;height:50px;background-color:#ccc;background-position:center;background-repeat:no-repeat;background-size:cover;border-radius:50%;}
+.map_wrap aside .user_name{display:block;overflow:hidden;position:absolute;left:0;top:50%;width:100%;padding-left:4rem;font-size:1.2rem;line-height:1;text-overflow:ellipsis;white-space:nowrap;color:#fff;letter-spacing:0;transform:translateY(-50%);}
+.map_wrap aside .user_comment{width:100%;}
+.map_wrap aside .user_comment li a{display:block;overflow:hidden;padding:0.4rem;text-overflow:ellipsis;white-space:nowrap;color:#fff;font-size:1.4rem;}
+.map_wrap .map_content{height:100%;padding-left:200px;background:#118eff;}
