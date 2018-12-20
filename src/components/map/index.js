@@ -22,7 +22,6 @@ class Index extends Component {
                             <li><a href="#">asdasdasdasdasdasdasdasdasdasdasdasdasdasdasd</a></li>
                             <li><a href="#">asdasdasdasdasdasdasdasdasdasdasdasdasdasdasd</a></li>
                             <li><a href="#">asdasdasdasdasdasdasdasdasdasdasdasdasdasdasd</a></li>
-                            <li><a href="#">asdasdasdasdasdasdasdasd</a></li>
                         </ul>
                     </div>
                 </aside>
