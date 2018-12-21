@@ -43,7 +43,14 @@ class Index extends Component {
                     </div>
                 </aside>
                 <div class="map_content">
-                    <button type="button">comment</button>
+                    <a className="item-list input_comment" href="#open-moda">코멘트 입력하기</a>
+
+                    <div id="open-moda" className="modal-window">
+                        <div>
+                            <a href="#modal-close" title="Close" className="modal-close">Close</a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         )
