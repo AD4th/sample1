@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+body *{box-sizing:border-box;}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,button{margin:0;padding:0;box-sizing:border-box;}
 fieldset,img{border:0 none;}
 dl,ul,ol,menu,li{list-style:none;}
@@ -17,10 +18,37 @@ a:active{background-color:transparent;}
 address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:normal;}
 
 .map_wrap{width:100%;}
-.map_wrap aside{position:absolute;left:0;top:0;bottom:0;z-index:1;width:12rem;padding:2rem 1rem;background:#51bebb;}
-.map_wrap aside .user_info{position:relative;width:8rem;margin-bottom:1rem;}
+.map_wrap aside{position:absolute;left:0;top:0;bottom:0;z-index:1;width:20rem;padding:2rem 0;background:#51bebb;}
+.map_wrap aside .user_info{position:relative;width:20rem;margin-bottom:1rem;}
 .map_wrap aside .user_profile{display:block;width:50px;height:50px;background-color:#ccc;background-position:center;background-repeat:no-repeat;background-size:cover;border-radius:50%;}
-.map_wrap aside .user_name{display:block;overflow:hidden;position:absolute;left:0;top:50%;width:100%;padding-left:4rem;font-size:1.2rem;line-height:1;text-overflow:ellipsis;white-space:nowrap;color:#fff;letter-spacing:0;transform:translateY(-50%);}
+.map_wrap aside .user_name{display:block;overflow:hidden;position:absolute;left:0;top:50%;width:100%;padding-left:4rem;font-size:1.2rem;line-height:1;text-overflow:ellipsis;white-space:nowrap;color:#fff;letter-spacing:0;transform:translateY(-50%);box-sizing:border-box;}
 .map_wrap aside .user_comment{width:100%;}
-.map_wrap aside .user_comment li a{display:block;overflow:hidden;padding:0.4rem;text-overflow:ellipsis;white-space:nowrap;color:#fff;font-size:1.4rem;}
-.map_wrap .map_content{height:100%;padding-left:200px;background:#118eff;}
+.map_wrap aside .user_comment li a{display:block;overflow:hidden;padding:0.5rem 0.5rem 0.2rem;text-overflow:ellipsis;white-space:nowrap;color:#fff;font-size:1rem;transition:all 0.1s ease-in-out;}
+.map_wrap aside .user_comment li a:hover{text-decoration:none;background-color:#51bebb!important;color:#fff!important;}
+
+.map_wrap aside .user_comment li a.time00{background-color:#011526;color:#fff;}
+.map_wrap aside .user_comment li a.time01{background-color:#0f2131;color:#fff;}
+.map_wrap aside .user_comment li a.time02{background-color:#203140;color:#fff;}
+.map_wrap aside .user_comment li a.time03{background-color:#344452;color:#fff;}
+.map_wrap aside .user_comment li a.time04{background-color:#4c5a65;color:#fff;}
+.map_wrap aside .user_comment li a.time05{background-color:#65717b;color:#fff;}
+.map_wrap aside .user_comment li a.time06{background-color:#7f8991;color:#f0f0f0;}
+.map_wrap aside .user_comment li a.time07{background-color:#99a1a8;color:#fefefe;}
+.map_wrap aside .user_comment li a.time08{background-color:#b2b8bd;color:#333;}
+.map_wrap aside .user_comment li a.time09{background-color:#caced2;color:#222;}
+.map_wrap aside .user_comment li a.time10{background-color:#dfe1e3;color:#111;}
+.map_wrap aside .user_comment li a.time11{background-color:#f0f1f3;color:#000000;}
+.map_wrap aside .user_comment li a.time12{background-color:#ffffff;color:#000000;}
+.map_wrap aside .user_comment li a.time13{background-color:#f0f1f3;color:#000000;}
+.map_wrap aside .user_comment li a.time14{background-color:#dfe1e3;color:#111;}
+.map_wrap aside .user_comment li a.time15{background-color:#caced2;color:#222;}
+.map_wrap aside .user_comment li a.time16{background-color:#b2b8bd;color:#333;}
+.map_wrap aside .user_comment li a.time17{background-color:#99a1a8;color:#fefefe;}
+.map_wrap aside .user_comment li a.time18{background-color:#7f8991;color:#f0f0f0;}
+.map_wrap aside .user_comment li a.time19{background-color:#65717b;color:#fff;}
+.map_wrap aside .user_comment li a.time20{background-color:#4c5a65;color:#fff;}
+.map_wrap aside .user_comment li a.time21{background-color:#344452;color:#fff;}
+.map_wrap aside .user_comment li a.time22{background-color:#203140;color:#fff;}
+.map_wrap aside .user_comment li a.time23{background-color:#0f2131;color:#fff;}
+
+.map_wrap .map_content{height:100%;padding-left:20rem;background:#118eff;}
