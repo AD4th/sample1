@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './style.css';
+import GoogleMap from './GoogleMap';
 
 const profileImg = {
     backgroundImage:"url('https://i.pinimg.com/736x/2c/2c/60/2c2c60b20cb817a80afd381ae23dab05.jpg')"
@@ -51,6 +52,7 @@ class Index extends Component {
                         </div>
                     </div>
 
+                    <GoogleMap />
                 </div>
             </div>
         )
