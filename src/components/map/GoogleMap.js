@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import { connect, } from 'react-redux';
 import GoogleMapReact from 'google-map-react';
-import { initGeoLocation, } from '../../actions/mapAction';
+import { setLongitudeOfCenter, setLatitudeOfCenter, initGeoLocation, } from '../../actions/mapAction';
+
+
+const CenterComponent = ({ text }) => <div><img width="25" height="25" src="/assets/imgs/places-icon.png" /></div>;
+//const CenterComponent = ({ text }) => <div>{text}</div>;
 
 class GoogleMap extends Component {
 
@@ -10,10 +14,10 @@ class GoogleMap extends Component {
         this.onChange = this.onChange.bind(this)
     }
 
-    onChange({center, zoom, bounds, ...other}) {
-        console.log('center', center);
-        console.log('zoom', zoom);
-        console.log('bounds', bounds);
+    onChange({center}) {
+        const { setLatitudeOfCenter, setLongitudeOfCenter, } = this.props;
+        setLatitudeOfCenter(center.lat);
+        setLongitudeOfCenter(center.lng);
     }
 
     componentDidMount() {
@@ -37,6 +41,11 @@ class GoogleMap extends Component {
                         defaultZoom={zoom}
                         onChange={this.onChange}
                     >
+                        <CenterComponent
+                            lat={latitude}
+                            lng={longitude}
+                            text={"내위치~"}
+                        />
                     </GoogleMapReact>
                 }
                 { !(latitude && longitude ) && `현재 위치를 찾는 중입니다.`}
@@ -51,5 +60,5 @@ export default connect(
         longitude: state.map.get('longitude'),
         zoom: state.map.get('zoom'),
     }),
-    { initGeoLocation, }
+    { setLongitudeOfCenter, setLatitudeOfCenter, initGeoLocation, }
 )(GoogleMap);
