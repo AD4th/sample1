@@ -8,13 +8,13 @@ const profileImg = {
 class Index extends Component {
     render() {
         return(
-            <div class="map_wrap">
+            <div className="map_wrap">
                 <aside>
-                    <div class="user_info">
-                        <span class="user_profile" style={profileImg}></span>
-                        <span class="user_name">알렉시스산체스네마냐비디치</span>
+                    <div className="user_info">
+                        <span className="user_profile" style={profileImg}></span>
+                        <span className="user_name">알렉시스산체스네마냐비디치</span>
                     </div>
-                    <div class="user_comment">
+                    <div className="user_comment">
                         <ul>
                             <li><a href="#" className="time01">위하여서, 목숨을 있는 구하지 그들에게 구하지 구하기 이것이다. 꽃 목숨이 원대하고, 것이다.보라, 물방아 길을 인생을 아름다우냐?</a></li>
                             <li><a href="#" className="time02">되는 따뜻한 위하여 무한한 커다란 그들의 것이다. 살 얼음 끓는 이상의 모래뿐일 심장은 사막이다.</a></li>
@@ -43,7 +43,7 @@ class Index extends Component {
                         </ul>
                     </div>
                 </aside>
-                <div class="map_content">
+                <div className="map_content">
                     <a className="item-list input_comment" href="#open-moda">코멘트 입력하기</a>
 
                     <div id="open-moda" className="modal-window">

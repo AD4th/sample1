@@ -1,49 +1,55 @@
 import React, { Component } from 'react';
+import { connect, } from 'react-redux';
 import GoogleMapReact from 'google-map-react';
-import {geolocated} from 'react-geolocated';
-import _ from 'lodash';
+import { initGeoLocation, } from '../../actions/mapAction';
 
 class GoogleMap extends Component {
 
     constructor(props) {
         super(props);
+        this.onChange = this.onChange.bind(this)
+    }
+
+    onChange({center, zoom, bounds, ...other}) {
+        console.log('center', center);
+        console.log('zoom', zoom);
+        console.log('bounds', bounds);
     }
 
     componentDidMount() {
-        if (!this.props.isGeolocationAvailable) {
-            alert('Your browser does not support Geolocation')
-        } else if (!this.props.isGeolocationEnabled) {
-            alert('Geolocation is not enabled')
-        }
+        const { initGeoLocation, } = this.props;
+        initGeoLocation();
     }
 
     render() {
 
-        console.log(this.props);
-
-        const latitude = _.get(this.props.coords, 'latitude', 37.375248299999996);
-        const longitude = _.get(this.props.coords, 'longitude',  127.14058120000001);
-        const zoom = 11;
+        const { latitude, longitude, zoom, } = this.props;
 
         return(
-            <div style={{ height: '100vh', width: '100%' }}>
-                <GoogleMapReact
-                    bootstrapURLKeys={{ key: 'AIzaSyCAZKhzZjsn_h_LTh8P7_wwYX2DslInOKU' }}
-                    defaultCenter={{
-                        lat: latitude,
-                        lng: longitude,
-                    }}
-                    defaultZoom={zoom}
-                >
-                </GoogleMapReact>
+            <div style={{ height: '100vh', width: '100%', backgroundColor: '#fff' }}>
+                { (latitude && longitude )  &&
+                    <GoogleMapReact
+                        bootstrapURLKeys={{key: 'AIzaSyCAZKhzZjsn_h_LTh8P7_wwYX2DslInOKU'}}
+                        defaultCenter={{
+                            lat: latitude,
+                            lng: longitude,
+                        }}
+                        defaultZoom={zoom}
+                        onChange={this.onChange}
+                    >
+                    </GoogleMapReact>
+                }
+                { !(latitude && longitude ) && `현재 위치를 찾는 중입니다.`}
             </div>
         )
     }
 }
 
-export default geolocated({
-    positionOptions: {
-        enableHighAccuracy: false,
-    },
-    userDecisionTimeout: 5000,
-})(GoogleMap);
+export default connect(
+    state => ({
+        latitude: state.map.get('latitude'),
+        longitude: state.map.get('longitude'),
+        zoom: state.map.get('zoom'),
+    }),
+    { initGeoLocation, }
+)(GoogleMap);
