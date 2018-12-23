@@ -72,7 +72,16 @@ class Index extends Component {
 
                     <div id="open-moda" className="modal-window">
                         <div>
-                            <a href="#modal-close" title="Close" className="modal-close">Close</a>
+                            <form action="" method="">
+                                <fieldset>
+                                    <legend>Comment 입력</legend>
+                                    <input type="text" placeholder="메세지 남기기..." />
+                                </fieldset>
+                            </form>
+                            <div className="btn_area">
+                                <a href="#modal-close" title="cancel" className="modal-close">취소</a>
+                                <button type="submit" className="btn-submit">확인</button>
+                            </div>
                         </div>
                     </div>
 
