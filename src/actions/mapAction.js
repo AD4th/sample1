@@ -12,6 +12,13 @@ export const setLongitudeOfCenter = (longitude) => (
     }
 );
 
+export const setMakers = (makers) => (
+    {
+        type: 'SET_MAKERS',
+        makers,
+    }
+);
+
 
 export const initGeoLocation = () => (dispatch, getState) => {
 
